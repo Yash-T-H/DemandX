@@ -1,4 +1,4 @@
-# Inventory Management and Stock-Out Prediction System
+# DemandX
 
 An end-to-end Java and Machine Learning application designed to manage inventory, track historical sales transactions, predict future product demand using **Smile ML**, and proactively trigger stock-out risk alerts based on supplier delivery lead times.
 
