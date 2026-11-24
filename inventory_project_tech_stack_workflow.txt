@@ -1,0 +1,49 @@
+PROJECT: Inventory Management and Stock-Out Prediction System
+
+TECH STACK
+
+1.  Java
+    -   Main programming language.
+    -   Handles product, sales, and inventory operations.
+2.  SQLite
+    -   Stores product details, current stock, and sales history.
+3.  JDBC
+    -   Connects the Java application to the SQLite database.
+4.  Maven
+    -   Manages Java project dependencies, including the SQLite JDBC
+        driver and Smile.
+5.  Smile
+    -   Java machine-learning library.
+    -   Trains a model to predict future product demand from historical
+        sales.
+6.  Frontend (optional)
+    -   HTML, CSS, and JavaScript for a simple dashboard.
+
+WORKFLOW
+
+1.  Add products
+    -   Store product name, price, and available quantity in SQLite.
+2.  Record sales
+    -   Save each sale with the product, date, and quantity sold.
+3.  Update inventory
+    -   Reduce the product’s available quantity when a sale is recorded.
+4.  Prepare historical data
+    -   Retrieve past sales from SQLite and prepare it for the
+        prediction model.
+5.  Predict demand
+    -   Use Smile to estimate future sales for each product.
+6.  Check stock-out risk
+    -   Compare current inventory with expected demand and supplier
+        delivery time.
+7.  Show alerts
+    -   Display products that may run out soon and suggest when to
+        reorder.
+
+BASIC DATA TABLES
+
+Products: - product_id - name - price - quantity_in_stock
+
+Sales: - sale_id - product_id - sale_date - quantity_sold
+
+Note: The prediction is an estimate based on historical sales. It is not
+a guarantee of future demand.
